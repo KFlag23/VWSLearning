@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+    input
+    {
+        font-family: Verdana;
+        font-size: 12;
+        padding:5px;
+        color: #ffffff;
+        border-width: 0;
+        background-color: #000077;
+        text-align: center;
+    }
+    </style>
+</head>
+ 
+<body>
+    <form name="form">
+        Tiempo restante...:
+        <input type="text" size="3" name="hour" disabled>:
+        <input type="text" size="3" name="minute" disabled>:
+        <input type="text" size="3" name="second" disabled>
+    </form>
+</body>
+</html>
+ 
+<script>
+(function(){
+    //Codigo que muestra una cuenta atras hasta finalizar el tiempo indicado
+    //La Web del Programador
+    //http://www.lawebdelprogramador.com
+ 
+    //variables que determinan el total de horas, minutos y segundos para la cuenta atras
+    let toHour=1;
+    let toMinute=0;
+    let toSecond=0;
+ 
+    //cuenta atras
+    function countDown()
+    {
+        if (--toSecond<0) {
+            toSecond=59;
+            if (--toMinute<0) {
+                toMinute=59;
+                toHour--;
+            }
+        }
+ 
+        if (toHour<0) {
+            clearInterval(interval);
+        } else {
+            form.second.value=toSecond;
+            form.minute.value=toMinute;
+            form.hour.value=toHour;
+        }
+    }
+ 
+    let interval=setInterval(countDown, 1000);
+})();
+</script>
