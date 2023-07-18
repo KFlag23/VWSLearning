@@ -3,8 +3,33 @@ let restar = document.getElementById('restar');
 let sumar = document.getElementById('sumar');
 let multi = document.getElementById('multi');
 let divid= document.getElementById('divid');
+let potencia= document.getElementById('potencia');
+let raiz=document.getElementById('raiz');
+let redondeo=document.getElementById('Redondeo');
 var operador;
 var resultado;
+redondeo.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    var h1res=document.getElementById('ResultadoOper');
+    resultado=parseInt(resultado);
+    h1res.textContent=Math.round(resultado);
+    });
+raiz.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    var h1res=document.getElementById('ResultadoOper');
+    const Num1 = document.getElementById('Num1TXT').value;
+    const Num2 = document.getElementById('Num2TXT').value;
+    resultado = Math.sqrt(Num1,Num2)
+    h1res.textContent=resultado;
+    });
+potencia.addEventListener('click', (event) => {
+    event.preventDefault(); 
+    var h1res=document.getElementById('ResultadoOper');
+    const Num1 = document.getElementById('Num1TXT').value;
+    const Num2 = document.getElementById('Num2TXT').value;
+    resultado = Math.pow(Num1,Num2)
+    h1res.textContent=resultado;
+    });
 restar.addEventListener('click', (event) => {
     operador = '-';
     

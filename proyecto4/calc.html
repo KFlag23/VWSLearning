@@ -11,25 +11,29 @@
         <div>
             <h1>Bienvenido a la calculadora Javascript</h1>
             <br>
+            <div class="caja">
             <form id="formucalc">
                 <label for="Num1">Introduce el primer numero</label> <br>
                 <input type="number" id="Num1TXT"> <br>
-               <label for="operadores">Selecciona el operador:</label> <br>
+                <br>
+                <label for="Num2">Introduce el segundo numero</label> <br>
+                <input type="number" id="Num2TXT"> <br>
+                <label for="operadores">Selecciona el operador:</label> <br>
                 <div class="grid-operadores">
                     <button class="grid-oper-items" id="multi">*</button>
                     <button class="grid-oper-items"id="sumar" >+</button>
                     <button class="grid-oper-items" id="divid">/</button>
                     <button class="grid-oper-items" id="restar">-</button>
+                    <button class="grid-oper-items" id="potencia">potencia</button>
+                    <button class="grid-oper-items" id="raiz">raiz</button>
                 </div>
-                <br>
-                <label for="Num2">Introduce el segundo numero</label> <br>
-                <input type="number" id="Num2TXT"> <br>
                 <h1>Resultado:</h1> <br>
                 <h1 id="ResultadoOper"></h1>
-
+                <button id="Redondeo">Redondear?</button>
 
 
             </form>
+        </div>
         </div>
     </center>
     <script src="calc.js"></script>

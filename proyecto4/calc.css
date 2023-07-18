@@ -3,6 +3,7 @@
     max-width: 1rem;
     grid-template-rows: auto;
     grid-template-columns: auto;
+    
 }
 
 .grid-oper-items{
@@ -13,4 +14,10 @@ input{
     margin-top: 1rem;
     margin-bottom: 1rem;
     max-height: 1rem;
+}
+
+.caja{
+    padding: 1rem;
+    border: solid black 4px;
+    max-width:50% ;
 }
