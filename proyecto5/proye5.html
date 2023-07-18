@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de peliculas P5</title>
+    <link rel="stylesheet" href="proye5.css">
+</head>
+<body>
+    <h1>Bienvenido al catalogo de peliculas javascript</h1>
+    <div>
+        <form id="FormuCine">
+            <label for="edad">Introduce tu edad real:</label><br>
+            <input type="number" id="EdadCine"><br>
+            <label for="genero">Selecciona tu genero favorito:</label> <br>
+            <select name="Generos" id="generos">
+                <option value="Comedia">Comedia</option>
+                <option value="Crimen">Crimen</option>
+                <option value="Drama">Drama</option>
+                <option value="Musical">Musical</option>
+            </select><br>
+            <button type="submit">Comprobar Peliculas</button>
+        </form>
+    </div>
+    <br>
+    <h1 id="Peliculas"></h1>
+    <br>
+    <div id="resultado">
+    </div>
+    <script src="proye5.js"></script>
+</body>
+</html>
