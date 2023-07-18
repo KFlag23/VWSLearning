@@ -7,6 +7,7 @@ var operador;
 var resultado;
 restar.addEventListener('click', (event) => {
     operador = '-';
+    
     });
 sumar.addEventListener('click', (event) => {
     operador = '+';
