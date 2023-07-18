@@ -1,11 +1,11 @@
-.grid-operadores{
+.grid-operadores > div{
     display: grid;
     max-width: 1rem;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
 }
 
-.grid-items{
+.grid-oper-items{
     margin-top: 1rem;
 }
 
