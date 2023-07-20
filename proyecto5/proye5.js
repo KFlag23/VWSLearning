@@ -31,7 +31,7 @@ formulario.addEventListener('submit', (event) => {
     let Edad= document.getElementById('EdadCine').value;
     const selectElement = document.getElementById('generos');
     const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
-    var peliculascomedia= ["The Wolf of Wall Street ", "The Truman Show","Back to the Future"];
+    var peliculascomedia= ['The Wolf of Wall Street ', 'The Truman Show','Back to the Future'];
     var peliculascrimen= ["The Godfather ","El secreto de sus ojos"];
     var peliculasdrama= ["Taxi Driver ","Casablanca","The Shawshank Redemption",];
     var peliculasmusica= ["The Rocky Horror Picture Show"," La La Land", "Les Miserables"];
@@ -67,18 +67,22 @@ formulario.addEventListener('submit', (event) => {
 
     }
       if(Edad>16 && selectedOptionText=='Comedia'){
-        h1wtext.textContent=" The Wolf of Wall Street  "+ "The Truman Show"+"Back to the Future";
-        document.body.appendChild(h1wtext);
+        for(var x=0;x < peliculascomedia.length;x++){
+          let itemcomedia=document.createElement("h1");
+          itemcomedia.innerText=peliculascomedia[x];
+          h1res.appendChild(itemcomedia);
 
+        }
     };
       if(Edad<16 && selectedOptionText=='Comedia'){
         h1wtext.textContent="The Truman Show ";
         document.body.appendChild(h1wtext);
 
       }
-
       setTimeout(refrescar,2000);
 });
+
+
 
 function refrescar(){
     location.reload();
