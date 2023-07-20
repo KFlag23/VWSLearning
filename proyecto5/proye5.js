@@ -1,29 +1,8 @@
-/*Catalogo de peliculas:
 
-• Comedia
-    - Back to the Future - ATP
-    - The Truman Show - +13
-    - The Wolf of Wall Street - +16
-
-̉• Crimen
-    - No hay peliculas ATP
-    - El secreto de sus ojos - +13
-    - The Godfather - +16
-
-• Drama
-    - Casablanca - ATP
-    - The Shawshank Redemption - +13
-    - Taxi Driver - +16
-
-• Musical
-    - La La Land - ATP
-    - Les Miserables - +13
-    - The Rocky Horror Picture Show - +16 */
-
-    
 let formulario=document.forms.FormuCine;
 let h1res=document.getElementById('resultado');
 let textoRes=document.getElementById('Peliculas');
+let itemcomedia=document.createElement("h1");
 formulario.addEventListener('submit', (event) => {
     event.preventDefault(); 
     const h1append = document.createDocumentFragment()
@@ -35,55 +14,57 @@ formulario.addEventListener('submit', (event) => {
     var peliculascrimen= ["The Godfather ","El secreto de sus ojos"];
     var peliculasdrama= ["Taxi Driver ","Casablanca","The Shawshank Redemption",];
     var peliculasmusica= ["The Rocky Horror Picture Show"," La La Land", "Les Miserables"];
-
     if(Edad>16 && selectedOptionText=='Musical'){
-        h1wtext.textContent=" The Rocky Horror Picture Show \n La La Land\n Les Miserables";
-        document.body.appendChild(h1wtext);
-
+        for(var x=0;x < peliculasmusica.length;x++){
+          itemcomedia.innerText+=peliculasmusica[x];
+          h1res.appendChild(itemcomedia);
+        }
     };
     if(Edad<16 && selectedOptionText=='Musical'){
-        h1wtext.textContent="Les Miserables";
-        document.body.appendChild(h1wtext);
-
+        for(var x=0;x < peliculasmusica.length;x++){
+          itemcomedia.innerText+=peliculasmusica[x];
+          h1res.appendChild(itemcomedia);
+        }
     }
     if(Edad>16 && selectedOptionText=='Drama'){
-        h1wtext.textContent=" Taxi Driver "+ "Casablanca"+"The Shawshank Redemption";
-        document.body.appendChild(h1wtext);
-
+        for(var x=0;x < peliculasdrama.length;x++){
+          itemcomedia.innerText+=peliculasdrama[x];
+          h1res.appendChild(itemcomedia);
+        }
     };
       if(Edad<16 && selectedOptionText=='Drama'){
-        h1wtext.textContent="The Shawshank Redemption";
-        document.body.appendChild(h1wtext);
-
+        for(var x=0;x < peliculasdrama.length;x++){
+          itemcomedia.innerText+=peliculasdrama[x];
+          h1res.appendChild(itemcomedia);
+        }
     }
       if(Edad>16 && selectedOptionText=='Crimen'){
-        h1wtext.textContentt=" The Godfather "+ "\nEl secreto de sus ojos";
-        document.body.appendChild(h1wtext);
-
+        for(var x=0;x < peliculascrimen.length;x++){
+          itemcomedia.innerText+=peliculascrimen[x];
+          h1res.appendChild(itemcomedia);
+        }
     };
       if(Edad<16 && selectedOptionText=='Crimen'){
-        h1wtext.textContent="El secreto de sus ojos";
-        document.body.appendChild(h1wtext);
-
+        for(var x=0;x < peliculascrimen.length;x++){
+          itemcomedia.innerText+=peliculascrimen[x];
+          h1res.appendChild(itemcomedia);
+        }
     }
       if(Edad>16 && selectedOptionText=='Comedia'){
         for(var x=0;x < peliculascomedia.length;x++){
-          let itemcomedia=document.createElement("h1");
+          itemcomedia.innerText=peliculascomedia[x];
+          h1res.appendChild(itemcomedia);        }
+    };
+      if(Edad<16 && selectedOptionText=='Comedia'){
+        for(var x=0;x < peliculascomedia.length;x++){
           itemcomedia.innerText=peliculascomedia[x];
           h1res.appendChild(itemcomedia);
 
-        }
-    };
-      if(Edad<16 && selectedOptionText=='Comedia'){
-        h1wtext.textContent="The Truman Show ";
-        document.body.appendChild(h1wtext);
+                }
 
       }
-      setTimeout(refrescar,2000);
 });
 
-
-
-function refrescar(){
-    location.reload();
+function resetear(){
+  itemcomedia.parentNode.removeChild(itemcomedia)
 }

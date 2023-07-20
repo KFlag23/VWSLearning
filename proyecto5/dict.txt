@@ -1,0 +1,21 @@
+/*Catalogo de peliculas:
+
+• Comedia
+    - Back to the Future - ATP
+    - The Truman Show - +13
+    - The Wolf of Wall Street - +16
+
+̉• Crimen
+    - No hay peliculas ATP
+    - El secreto de sus ojos - +13
+    - The Godfather - +16
+
+• Drama
+    - Casablanca - ATP
+    - The Shawshank Redemption - +13
+    - Taxi Driver - +16
+
+• Musical
+    - La La Land - ATP
+    - Les Miserables - +13
+    - The Rocky Horror Picture Show - +16 */
